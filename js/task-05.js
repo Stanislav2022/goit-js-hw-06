@@ -6,4 +6,3 @@ inputElement.addEventListener('input', onInputChange);
 function onInputChange (event) {
     outputElement.textContent = event.currentTarget.value
     }
-inputElement.addEventListener('blur', () => {outputElement.textContent = `Anonymous`});
