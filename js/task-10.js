@@ -12,19 +12,18 @@ const buttonCreateEl = document.querySelector ('button[data-create]')
 
 inputEl.addEventListener('change', onInputChange);
 
-buttonCreateEl.addEventListener('click', onButtonCreateChange);
+buttonCreateEl.addEventListener('click', createBoxes);
 
-let x = 0;
-let number = 0;
+let x = 20;
+let amount = 0;
 
 function onInputChange (event) {
-  number = `${event.currentTarget.value}`
-  console.log(number)
+  amount = `${event.currentTarget.value}`
   }
   
-function onButtonCreateChange (){
+function createBoxes (){
  
-  for (let i = 0; i < number ; i += 1) {
+  for (let i = 0; i < amount ; i += 1) {
 
     let divBox = document.createElement('div');
     x += 10;
@@ -35,13 +34,9 @@ function onButtonCreateChange (){
 
   }
 }
+const buttonDestroyEl = document.querySelector ('button[data-destroy]')
+buttonDestroyEl.addEventListener('click', destroyBoxes)
+function destroyBoxes() {
+  boxesEl.remove()
+}
 
-
-
-
-
- 
-
-
-
-// console.log(divBox)
